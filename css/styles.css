@@ -163,6 +163,10 @@ img {
     right: 0;
     width: 550px;
 }
+.background img {
+    position: absolute;
+    bottom: 0;
+}
 .booking-info {
     position: absolute;
     bottom: 0;
@@ -172,22 +176,53 @@ img {
 }
 .booking-info > span {
     display: inline-block;
-    width: 12em;
+    width: 11em;
+    padding: .4em .8em;
 }
 .booking-title {
+    position: relative;
+    z-index: 1;
     font-family: 'Stalinist One', sans-serif;
     text-transform: uppercase;
     background-color: #999999;
-    padding: .2em .5em;
     margin-right: -4px;
+}
+.booking-title:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5em;
+    z-index: -1;
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 5em solid transparent;
+    border-right: 5em solid transparent;
+    border-bottom: 5em solid #999999;
 }
 .booking-title span {
     font-size: .7em;
 }
 .booking-email {
-    color: #3c3f42;
+    position: relative;
+    z-index: 1;
     background-color: white;
 }
-.booking-email span {
+.booking-email:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2em;
+    z-index: -1;
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 2em solid transparent;
+    border-right: 2em solid transparent;
+    border-bottom: 2em solid white;
+}
+.booking-email a {
+    color: #3c3f42;
     font-size: .9em;
+    text-decoration: none;
 }
