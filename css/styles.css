@@ -53,6 +53,12 @@ img {
     margin-bottom: 1em;
 }
 
+@media all and (max-width : 640px) {
+    .stripes {
+        height: 1em;
+    }
+}
+
 
 .wrapper {
     overflow: hidden;
@@ -107,6 +113,13 @@ img {
     display: block;
 }
 
+@media all and (max-width : 640px) {
+    .social-icons li {
+        padding: .25em;
+        border-radius: .4em;
+    }
+}
+
 .events-header {
     overflow: hidden;
     margin-bottom: 1em;
@@ -140,6 +153,9 @@ img {
 .events-venue {
     width: 45%;
 }
+.events-location {
+    width: 33%;
+}
 .events-more {
     font-size: .8em;
     text-align: right;
@@ -158,6 +174,13 @@ img {
     width: 75px;
     vertical-align: bottom;
     margin-right: .25em;
+}
+
+@media all and (max-width : 640px) {
+    .events span {
+        font-size: .8em;
+        font-family: sans-serif;
+    }
 }
 
 .background {
