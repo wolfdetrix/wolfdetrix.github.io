@@ -62,14 +62,21 @@ img {
     margin: 2em auto 0;
 }
 
-.main,
-.side {
-    float: left;
-}
-
 .main {
     width: 60%;
     margin-right: 5%;
+    float: left;
+}
+
+@media all and (max-width : 640px) {
+    .wrapper {
+        width: 90%;
+        margin: 2em auto;
+    }
+    .main {
+        width: 100%;
+        float: none;
+    }
 }
 
 .social-icons {
@@ -153,10 +160,6 @@ img {
     margin-right: .25em;
 }
 
-.side {
-  width: 35%;
-}
-
 .background {
     position: fixed;
     bottom: 0;
@@ -167,6 +170,7 @@ img {
     position: absolute;
     bottom: 0;
 }
+
 .booking-info {
     position: absolute;
     bottom: 0;
@@ -225,4 +229,28 @@ img {
     color: #3c3f42;
     font-size: .9em;
     text-decoration: none;
+}
+
+@media all and (max-width : 640px) {
+    .background {
+        position: static;
+        width: 100%;
+    }
+    .background img {
+        display: none;
+    }
+    .booking-info {
+        position: static;
+        text-align: center;
+    }
+    .booking-info > span {
+        display: block;
+        width: 100%;
+    }
+    .booking-info > span:before {
+        display: none;
+    }
+    .booking-info br {
+        display: none;
+    }
 }
